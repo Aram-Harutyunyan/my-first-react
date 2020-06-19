@@ -22,15 +22,13 @@ class Header extends Component {
   }
   render() {
     return (
-      <div className="arrows">
-        <img src={arrowleft} onClick={this.minusCount}></img>
-        hi {this.state.count}
-        <img src={rectangle}></img>
+      <div className="flex-arrows">
+        <img  src={arrowleft} onClick={this.minusCount}></img>
+        <div className="number-rectangle">
+          <div className="number">{this.state.count}</div>
+          <img src={rectangle}></img>
+        </div> 
         <img src={arrowright} onClick={this.plusCount}></img>
-      
-        
-        <button onClick={this.changeCount}>Click on me</button>
-        hi {this.state.count2}
       </div>
     )
   }
